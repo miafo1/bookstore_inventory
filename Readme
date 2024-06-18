@@ -1,0 +1,11 @@
+super admin
+        prince
+        yourhighness
+Normal user
+        just register
+python manage.py test will carry out a test of the end points
+python manage.py runserver will start the server
+python manage.py makemigrations will create the migration files
+python manage.py migrate will apply the migration files to the database
+python manage.py createsuperuser will create a superuser account
+python manage.py shell will open a shell where you can interact with the database

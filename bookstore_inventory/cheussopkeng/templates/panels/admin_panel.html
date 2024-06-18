@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/panel.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Bookstore Admin Panel</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome, Admin!</h1>
+            <p class="lead">Manage the bookstore inventory here.</p>
+            <hr class="my-4">
+            <p>Use the navigation below to manage books and authors in the bookstore inventory.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Bookstore Inventory</h2>
+                <p>Manage your book collection by adding, updating, or removing books.</p>
+                <a href="{% url 'book_list' %}" class="btn btn-primary btn-block">Manage Books</a>
+            </div>
+            <div class="col-md-6">
+                <h2>Authors</h2>
+                <p>Manage your author list by adding, updating, or removing authors.</p>
+                <a href="{% url 'author_list' %}" class="btn btn-primary btn-block">Manage Authors</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
